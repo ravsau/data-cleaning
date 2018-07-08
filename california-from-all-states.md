@@ -85,3 +85,10 @@ This will reduce the list from 5000 something items ----> 50 something items
 3324  CALIFORNIA             YUBA 
 ```
 
+Now let's output the results to a csv file
+
+```python
+new.to_csv(path_or_buf="Cali-counties.csv")
+```
+
+The resulting file is  uploaded in this repo named "Cali-counties.csv"
