@@ -88,8 +88,11 @@ This will reduce the list from 5000 something items ----> 50 something items
 Now let's output the results to a csv file
 
 ```python
-new.to_csv(path_or_buf="Cali-counties.csv")
+# index=flase will not add an index to eacht tow in the output file
+new.to_csv(path_or_buf="Cali-counties.csv" , index=False)
 ```
+
+
 
 The resulting file is  uploaded in this repo named "Cali-counties.csv"
 
