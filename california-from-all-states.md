@@ -9,13 +9,13 @@ https://stackoverflow.com/questions/17071871/select-rows-from-a-dataframe-based-
 import pandas as pd
 
 # Open the desired file to filter from. File is provided in the repo
-iris=pd.read_csv("geography.csv")
+allCounties=pd.read_csv("geography.csv")
 
 # Create a list to match from. In this case I only have 1 item.
 tomatch=["CALIFORNIA"]
 
 # Filter IF the Column 'State' = CALIFORNIA
-new= iris.loc[iris['State'].isin(tomatch)]
+new= allCounties.loc[allCounties['State'].isin(tomatch)]
 
 # print results
 new
