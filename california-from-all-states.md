@@ -92,3 +92,39 @@ new.to_csv(path_or_buf="Cali-counties.csv")
 ```
 
 The resulting file is  uploaded in this repo named "Cali-counties.csv"
+
+
+Now, let's create a list out of all the area code in the new dataframe
+
+```python
+#declare an empty array 
+area_list=[]
+
+#append the list of the AreaCodes to the list
+areaList = new['Area'].tolist()
+```
+
+
+This time , I have a larger file with about 500,000 items. I'm filtering items that match the Area code in the areaList array.\
+
+So let's load that file first:
+
+```python
+
+new_bigList=pd.read_csv("ALC_Export.csv")
+
+```
+
+Now let's filter out the desired items just like we did earlier
+```python
+# Filter IF the area is in the areaList
+filtered_bigList= new_bigList.loc[new_bigList['Area'].isin(areaList)]
+           
+ ```
+ 
+ The length of items went from 484,390 ---->27,914
+ 
+ 
+ 
+           
+
